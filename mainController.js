@@ -29,10 +29,27 @@ export class MainController {
               });
         })
 
+        button2.addEventListener('click',()=>{
+            confetti({
+                ...defaults,
+                particleCount: 40,
+                scalar: 1.2,
+                shapes: ['star']
+              });
+            
+              confetti({
+                ...defaults,
+                particleCount: 10,
+                scalar: 0.75,
+                shapes: ['circle']
+              });
+            
+            
+            setTimeout(shoot, 0);
+            setTimeout(shoot, 100);
+            setTimeout(shoot, 200);
+            })
         
-
-   
-      
 
         mainContainer.appendChild(button1)
         mainContainer.appendChild(button2)
